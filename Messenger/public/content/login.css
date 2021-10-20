@@ -1,0 +1,52 @@
+#connectez{
+    text-align: center;
+    font-size: 4em;
+}
+#accesrapdide{
+    text-align: center;
+    font-size: 2em;
+}
+#loginZone{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+   
+}
+button{
+    color:white;
+}
+a{
+    padding-left: 1em;
+}
+.loginImage{
+    display: block;
+    width: 3.5em;
+    height: 3.5em;
+}
+input, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #000;
+    background-color: white;
+}
+form{
+    padding: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 40%;
+    text-align: left;
+    border: 0.5em solid;
+    border-color: #393a3b;
+
+    border-radius: 5em;
+}

@@ -1,0 +1,23 @@
+#center{
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction:column;
+}
+#center *{
+    margin: 0;
+    padding: 0;
+    padding-top: 1em;
+}
+h1{
+    font-size: 5em;
+}
+a{
+    text-align: center;
+    font-size: 2em;
+}
+

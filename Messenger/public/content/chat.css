@@ -1,0 +1,234 @@
+main {
+    display :  grid;
+    grid-template-columns:  20% 80%;
+    grid-template-areas:    "list chat";
+    overflow-y: hidden;
+}
+#currentUser{
+    display: flex;
+    float: right;
+    margin: 1em;
+}
+#currentUser * {
+    
+    padding:0.1em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#list{
+
+    height: 110%;
+    grid-area: list;
+    border:1px solid;
+    border-color: #393a3b;
+    border-left-style: none;
+   
+}
+#list h2{
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    height: 9vh;
+    margin: 0;
+}
+
+button{
+    background-color: hsl(210, 3%, 15%);
+    color: white;
+    border: none;
+    width : 100%;
+    margin : 0;
+}
+form{
+    padding : 0;
+    margin : 0;
+}
+button:hover{
+    background-color: hsl(200, 3%, 23%);
+}
+#SmallChats{
+    
+    height: 80vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.SmallChat{
+    display :  grid;
+    grid-template-columns: 20% auto;
+    grid-template-areas:   
+                            "smallImage smallTitle"
+                            "smallImage lastMessage";
+    padding: 0.1em;
+}
+.smallImage{
+    grid-area: smallImage;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    object-fit: cover;
+    float: right;
+}
+.image{
+    grid-area: smallImage;
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+  
+    object-fit: cover;
+  
+}
+.SmallChat .title{
+    color:white;
+    grid-area: smallTitle;
+    font-size: 1em;
+}
+.SmallChat .lastMessage{
+    grid-area: lastMessage;
+    color: #8f9396
+}
+#test{
+
+    overflow: scroll;
+    overflow-x: hidden;
+    
+    height: 76vh;
+    position: relative;
+}
+#chat{
+    padding: 1em;
+    border-right-style: none;
+    height: 110%;
+    grid-area: chat;
+    border:1px solid;
+    border-color: #393a3b;
+    border-right-style: none;
+}
+#chat .SmallChat{
+    display :  grid;
+    grid-template-columns: 5% auto;
+    grid-template-areas:   
+                            "smallImage smallTitle"
+                            "smallImage lastMessage";
+    padding: 0.1em;
+}
+#message{
+width: 80%;
+    position: absolute;
+    bottom: 0;
+}
+#messageImage{
+    display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+#messageButton{
+    display: inline-block;
+    padding: 1em;
+}
+#messageInput,#name{
+    background-color: #3e4042;
+    height: 3em;
+    width: 93%;
+    border: none;
+    margin: 1em 0em;
+    padding: 1em;
+    border-radius: 10em;
+    color: white;
+    font-size: 1em;
+    display: inline-block;
+}
+#messageInput:focus{
+    outline: none;
+}
+/* Chat containers */
+.container {
+    background-color: #0084ff;
+    padding: 0.5em 0.5em;
+    margin: 0;
+    border-radius: 10em;
+    float: right;
+  }
+  .container p{
+        margin: 0;
+  }
+  .author{
+    font-size: 0.8em;
+    margin: 0.1em 1em 0 0;
+    color: #8f9396;
+    float: right;
+  }
+  .left {
+    float: left;
+    
+  }
+  /* Darker chat container */
+  .darker {
+    background-color: #3e4042;
+    float: left;
+  }
+  
+  
+/* Popup box BEGIN */
+.hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+  }
+  .hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+  }
+  .hover_bkgr_fricc > div {
+    background-color: hsl(210, 3%, 15%);
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 2em;
+    padding: 15px 5%;
+  }
+  .popupCloseButton {
+    background-color: hsl(210, 3%, 15%);
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+  }
+  .popupCloseButton:hover {
+    background-color: hsl(210, 3%, 15%);
+  }
+  .trigger_popup_fricc {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+  }
